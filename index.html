@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Julie Adrounie · Physical AI</title>
+    <meta
+      name="description"
+      content="Julie Adrounie, Product Marketing at NVIDIA. Cudacycle: a self-guided project exploring physical AI through OpenUSD, Omniverse, ovrtx, ovphysx, and Isaac Sim."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=24" />
+  </head>
+  <body>
+    <section class="top" id="top">
+      <header class="nav">
+        <div class="brand-block">
+          <a class="brand" href="https://www.linkedin.com/in/julieadrounie" target="_blank" rel="noreferrer">Julie Adrounie</a>
+          <a class="brand-role" href="https://www.linkedin.com/in/julieadrounie" target="_blank" rel="noreferrer">Product Marketing at NVIDIA</a>
+        </div>
+      </header>
+
+      <div class="hero">
+        <div class="intro">
+          <p class="role">Physical AI · self-guided learning</p>
+          <h1>Cudacycle</h1>
+          <p class="lede">
+            A fun digital twin I used to learn OpenUSD, Omniverse, and the rest of the simulation stack from zero experience.
+          </p>
+          <ul class="stack">
+            <li>OpenUSD</li>
+            <li>ovrtx</li>
+            <li>ovphysx</li>
+            <li>Isaac Sim</li>
+          </ul>
+          <a class="jump" href="#cudacycle">View project</a>
+        </div>
+
+        <div class="portrait" aria-label="Portrait. Hover to reveal the humanoid twin.">
+          <p class="portrait-cue">Hover to reveal</p>
+          <div class="stage">
+            <img class="layer robot" src="assets/julie-robot.png" alt="" />
+            <img class="layer human" src="assets/julie.png" alt="Julie Adrounie" />
+          </div>
+          <div class="portrait-meta" aria-hidden="true">
+            <span>Human</span>
+            <span>Humanoid</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom">
+      <main class="work">
+        <article class="case reveal" id="cudacycle">
+          <header class="case-head">
+            <div class="case-copy">
+              <p class="section-label">Featured project</p>
+              <h2>Cudacycle</h2>
+              <p>
+                A digital twin of a campus commute: humanoid riders on a lightcycle path through a courtyard inspired by NVIDIA HQ.
+                I started with zero experience in OpenUSD and Omniverse. Building this was how I taught myself the stack.
+              </p>
+            </div>
+            <div class="case-meta">
+              <ul class="tags">
+                <li>OpenUSD</li>
+                <li>ovrtx</li>
+                <li>ovphysx</li>
+                <li>React</li>
+              </ul>
+              <a
+                class="text-link"
+                href="https://github.com/jadrounie12/cudacycle"
+                target="_blank"
+                rel="noreferrer"
+              >View repository</a>
+            </div>
+          </header>
+
+          <div class="why reveal">
+            <p class="views-label">What inspired it</p>
+            <p>
+              The Tron ride stuck with me. It reminded me of the NVIDIA campus, and I started wondering what happens when there are
+              billions of humanoids in the world. If they needed to move around for service or maintenance, what would that look like?
+              A similar kind of ride through a campus courtyard felt like a playful answer. That idea became Cudacycle.
+            </p>
+            <div class="inspo-pair">
+              <figure>
+                <div class="media-frame inspo-media">
+                  <video autoplay muted loop playsinline>
+                    <source src="assets/tron-ride.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <figcaption>
+                  <span class="view-name">Tron Lightcycle Run</span>
+                  <span class="view-note">The ride that sparked the idea: riders queued on a lightcycle path.</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <div class="media-frame inspo-media">
+                  <img src="assets/nvidia-campus.jpg" alt="NVIDIA headquarters entrance sign under the campus canopy" />
+                </div>
+                <figcaption>
+                  <span class="view-name">NVIDIA campus</span>
+                  <span class="view-note">The campus that made the connection: geometry that already feels like a grid world.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="why reveal">
+            <p class="views-label">How I used it to learn</p>
+            <p>
+              This was a fun, self-guided way for me to explore physical AI from the ground up. I put the OpenUSD stage together,
+              streamed a live camera with ovrtx, stepped wheel dynamics with ovphysx, and wired a React configurator to the live stage.
+              Omniverse and Isaac Sim coursework gave me the basics. Cudacycle is where I put them together and ran the twin on
+              NVIDIA Isaac Lab with Isaac Sim on an L40S.
+            </p>
+            <ul class="stack-used">
+              <li>
+                <span>OpenUSD</span>
+                I composed the stage in OpenUSD: cameras, materials, track, and fleet setup. Some courtyard geometry was AI-generated to save time, and I tested importing Meshy models for look-dev. That mix taught me how a digital twin is assembled, not only rendered.
+              </li>
+              <li>
+                <span>ovrtx</span>
+                I learned to stream a live camera as a JPEG from the stage. The configurator viewport shows that frame, not a local mock.
+              </li>
+              <li>
+                <span>ovphysx</span>
+                I stepped a wheel on a rail so remaining useful life follows solved omega from PhysX, not a timer in the UI.
+              </li>
+              <li>
+                <span>Omniverse · Isaac Sim</span>
+                Tutorials taught me layers, materials, cameras, physics, and the robot loop. I reused those ideas inside the twin.
+              </li>
+            </ul>
+          </div>
+
+          <div class="video-frame">
+            <video autoplay muted loop playsinline poster="assets/cam-hero.jpg">
+              <source src="assets/cudacycle-hero.mp4?v=24" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="config-block">
+            <header class="block-head">
+              <p class="views-label">React configurator</p>
+              <p class="config-lede">
+                The React app is the control surface: pick a rider, light, and finish, then launch the ride.
+                Those controls write the live USDA. The viewport is the ovrtx frame from the stage.
+              </p>
+            </header>
+
+            <div class="media-grid media-grid-2">
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/ui-rider.jpg" alt="Humanoid rider on the Cudacycle stage after rider selection" />
+                </div>
+                <figcaption>
+                  <span class="view-name">Select rider</span>
+                  <span class="view-note">AGIBOT or GALBOT. The configurator writes the rider look onto the stage.</span>
+                </figcaption>
+              </figure>
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/ui-light.jpg" alt="Cudacycle vehicle with light color variant on the stage" />
+                </div>
+                <figcaption>
+                  <span class="view-name">Select light</span>
+                  <span class="view-note">Blue, Magenta, or Yellow. Materials update on the prims.</span>
+                </figcaption>
+              </figure>
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/ui-finish.jpg" alt="Cudacycle vehicle with finish material variant on the stage" />
+                </div>
+                <figcaption>
+                  <span class="view-name">Select finish</span>
+                  <span class="view-note">Black, Chrome, or Carbon. Same courtyard, only the materials change.</span>
+                </figcaption>
+              </figure>
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/ui-launch.jpg" alt="Cudacycle on the commute track after launch" />
+                </div>
+                <figcaption>
+                  <span class="view-name">Launch ride</span>
+                  <span class="view-note">Start the commute. ovrtx moves the cycle; ovphysx steps the wheel.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="views-block">
+            <header class="block-head">
+              <p class="views-label">Same twin, three seats</p>
+            </header>
+            <div class="media-grid media-grid-3">
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/cam-hero.jpg" alt="Courtyard camera looking over the Cudacycle plaza and geodesic canopy" />
+                </div>
+                <figcaption>
+                  <span class="view-name">Courtyard</span>
+                  <span class="view-note">Looking over the plaza. The geodesic canopy is the campus roof.</span>
+                </figcaption>
+              </figure>
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/cam-chase.jpg" alt="Follow camera behind a Cudacycle on the commute track" />
+                </div>
+                <figcaption>
+                  <span class="view-name">On the path</span>
+                  <span class="view-note">Behind a cycle on the commute: riders, rails, and the loop.</span>
+                </figcaption>
+              </figure>
+              <figure class="reveal">
+                <div class="media-frame">
+                  <img src="assets/cam-cockpit.jpg" alt="Cabin camera from a Cudacycle rider’s point of view" />
+                </div>
+                <figcaption>
+                  <span class="view-name">From the cabin</span>
+                  <span class="view-note">The ride camera. Same stage, different seat.</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+
+        <article class="bridge reveal" id="perception">
+          <div class="bridge-copy">
+            <p class="section-label">Also built</p>
+            <h2>ovrtx perception demo</h2>
+            <p>
+              Before Cudacycle, I extended NVIDIA’s planet-system sample with semantic classes, Warp animation, and Rerun.
+              It was an earlier way to practice labeled worlds on GPU, and some of those ideas carried into the twin.
+            </p>
+            <ul class="tags">
+              <li>Warp</li>
+              <li>USD</li>
+              <li>Rerun</li>
+            </ul>
+          </div>
+          <a class="text-link" href="https://github.com/jadrounie12/ovrtx-perception-demo" target="_blank" rel="noreferrer">View repository</a>
+        </article>
+
+        <section class="learned reveal">
+          <p class="section-label">Foundation · coursework</p>
+          <p class="config-lede">
+            Those tutorials came first. NVIDIA’s Intro to Omniverse and Isaac Sim series taught me how to stage, render, step, and inspect.
+            Cudacycle is where I put those ideas into practice.
+          </p>
+          <ul>
+            <li>
+              <span>Isaac Sim tutorials</span>
+              Cameras, PhysX, and the robot loop inside a simulation I could inspect and change.
+            </li>
+            <li>
+              <span>Intro to Omniverse</span>
+              OpenUSD composition: layers, materials, RTX, and how an Omniverse stage fits together.
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-id">
+          <a href="https://www.linkedin.com/in/julieadrounie" target="_blank" rel="noreferrer">Julie Adrounie</a>
+          <span>Product Marketing at NVIDIA</span>
+        </div>
+        <nav aria-label="Footer">
+          <a href="https://www.linkedin.com/in/julieadrounie" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/jadrounie12" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </footer>
+    </div>
+
+    <script src="script.js?v=24"></script>
+  </body>
+</html>
